@@ -1,1 +1,3 @@
-"# mod22" 
+# Teste de Filtragem de mulheres 
+
+## Este teste JUnit verifica a funcionalidade de filtragem de mulheres no sistema. Ele cria uma lista de pessoas contendo algumas mulheres e alguns homens com base nos dados fornecidos pelo usuário. Em seguida, o teste utiliza a funcionalidade de filtragem do sistema para obter apenas as mulheres da lista. O teste garante que todas as pessoas presentes na lista filtrada são, de fato, mulheres, verificando se o atributo 'sexo' de cada pessoa é 'F' (feminino). Esse teste é importante para garantir que a funcionalidade de filtragem esteja funcionando corretamente, identificando apenas as mulheres no sistema e mantendo a consistência dos resultados esperados.
