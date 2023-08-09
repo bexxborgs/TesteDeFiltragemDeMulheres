@@ -1,7 +1,6 @@
 package br.com.rborges.service;
 
-import br.com.rborges.dao.ClienteDao;
-import br.com.rborges.dao.ClienteDaoMock;
+import br.com.rborges.Cliente;
 import br.com.rborges.dao.IClienteDAO;
 
 public class ClienteService {
@@ -16,5 +15,13 @@ public class ClienteService {
     public String salvar(){
         clienteDao.salvar();
         return "Sucesso";
+    }
+
+    public String consultaClientes() {
+        clienteDao.salvar();
+        return "sucesso";
+    }
+
+    public void removerCliente(Cliente cliente) {
     }
 }

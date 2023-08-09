@@ -6,6 +6,8 @@ import br.com.rborges.service.ClienteService;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
+
 /**
  * @author Rebeca
  */
@@ -27,5 +29,24 @@ public class ClienteServiceTest {
         Assert.assertEquals("Sucesso", retorno);
 
     }
+    @Test
+    public void consultarClientesVazioTest() {
+        ClienteDaoMock mockDao = new ClienteDaoMock();
+        ClienteService service = new ClienteService(mockDao);
+       String retorno = service.consultaClientes();
+        Assert.assertTrue("Sucesso", retorno.isEmpty());
+    }
+
+    @Test
+    public void removerClienteTest() {
+        ClienteDaoMock mockDao = new ClienteDaoMock();
+        ClienteService service = new ClienteService(mockDao);
+        Cliente cliente = new Cliente("Cliente1");
+        mockDao.adicionarCliente(cliente);
+        Assert.assertEquals(1, mockDao.getClientes().size());
+        service.removerCliente(cliente);
+        Assert.assertTrue(mockDao.getClientes().isEmpty());
+    }
+
 
 }
